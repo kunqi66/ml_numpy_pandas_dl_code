@@ -16,6 +16,20 @@
             "username": "root",
             "password": "123456",
             "database": "testbase"
+        },
+        {
+            "mysqlOptions": {
+                "authProtocol": "default",
+                "enableSsl": "Disabled"
+            },
+            "ssh": "Disabled",
+            "previewLimit": 50,
+            "server": "192.168.92.128",
+            "port": 3306,
+            "driver": "MySQL",
+            "name": "testlinux",
+            "database": "testbase",
+            "username": "root"
         }
     ]
 }
