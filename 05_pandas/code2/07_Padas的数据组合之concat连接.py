@@ -123,7 +123,7 @@ if __name__ == '__main__':
     #mySeriesConcatSeries()
 
     # 2）DataFrame与Series连接
-    #myDataFrameConcatSeries()
+    myDataFrameConcatSeries()
 
     # 3）DataFrame与DataFrame连接 ，家庭作业，自己看懂。
     #myDataFrameConcatDataFrame()

@@ -16,7 +16,7 @@ median()	中位数
 count()	非空数量
 size()	总行数（不管空值）
 min()	最小值
-max()	最大值
+max()	最大值    
 std()	标准差
 var()	方差
 nunique()	去重后的数量
@@ -31,7 +31,7 @@ nunique()	去重后的数量
 
 
 #初始化： 读取天气数据
-df = pd.read_csv("../data/weather.csv")
+df = pd.read_csv("./data/weather.csv")
 print("weather.csv初始数据：\n",df)
 # 将date转换为 年-月 的格式
 df["month"] = pd.to_datetime(df["date"]).dt.to_period("M").astype(str)
@@ -42,11 +42,11 @@ print("添加month列后新数据:\n",df)
 
 # ① 分组：指定分组字段进行分组,本例按month分组，返回一个分组对象(DataFrameGroupBy)
 df_groupby_month = df.groupby("month")
-#print("指定分组字段进行分组,本例按照month分组:\n",df_groupby_month.value_counts())
+print("指定分组字段进行分组,本例按照month分组:\n",df_groupby_month.value_counts())
 print()
 # ② 取字段：从分组对象中选择特定的列
 month_temp = df_groupby_month[["temp_max", "temp_min"]]
-#print("month_temp:\n",month_temp.value_counts())
+print("month_temp:\n",month_temp.value_counts())
 # ③ 做聚合：对每个列求平均值，调用聚合函数 进行mean()	平均值统计
 month_temp_mean = month_temp.mean()
 print("对每个列求平均值，调用聚合函数 进行统计:\n",month_temp_mean)

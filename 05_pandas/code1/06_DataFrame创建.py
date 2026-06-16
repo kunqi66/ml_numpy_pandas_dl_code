@@ -47,7 +47,7 @@ def createDataFrame():
 
 
 if __name__ == '__main__':
-    #series_DataFrameDesc()
+    series_DataFrameDesc()
 
     createDataFrame()
 

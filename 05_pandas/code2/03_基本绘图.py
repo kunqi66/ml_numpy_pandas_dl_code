@@ -10,7 +10,7 @@ import matplotlib.pyplot as plt
 # ============================================================================
 
 #初始化： 读取天气数据
-df = pd.read_csv("../data/weather.csv")
+df = pd.read_csv("./data/weather.csv")
 print("weather.csv初始数据：\n",df)
 # 将date转换为 年-月 的格式
 df["month"] = pd.to_datetime(df["date"]).dt.to_period("M").astype(str)

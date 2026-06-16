@@ -17,7 +17,7 @@ import pandas as pd
 # ============================================================================
 
 # 读取天气数据
-df = pd.read_csv("../data/weather.csv")
+df = pd.read_csv("./data/weather.csv")
 
 # 属性操作
 print("查看df类型:\n",type(df))

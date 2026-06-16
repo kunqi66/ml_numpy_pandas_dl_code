@@ -20,7 +20,7 @@ def dataConnectionType1_1():
     df1 = pd.DataFrame({"employee": ["Bob", "Jake", "Lisa", "Sue"],
                         "group": ["Accounting", "Engineering", "Engineering", "HR"]})
     print(df1)
-    df2 = pd.DataFrame({"employee": ["Lisa", "Bob", "Jake", "Sue"],
+    df2 = pd.DataFrame({"employee": ["Lis", "Bob", "Jake", "Sue"],
                         "hire_date": [2004, 2008, 2012, 2014]})
     print(df2)
 
@@ -132,9 +132,11 @@ def merge_Lefton_Righton():
 def merge_LeftIndex_RightIndex():
     df1 = pd.DataFrame(
         {"employee": ["Bob", "Jake", "Lisa", "Sue"],
+         'test':[1,2,3,4],
          "group": ["Accounting", "Engineering", "Engineering", "HR"]}
     )
     df2 = pd.DataFrame({"employee": ["Lisa", "Bob", "Jake", "Sue"],
+                        'test':[5,6,7,8],
                         "hire_date": [2004, 2008, 2012, 2014]})
 
     # 把 employee 这一列提升为行索引,原来的列消失，变成最左边的索引
@@ -148,11 +150,11 @@ def merge_LeftIndex_RightIndex():
 # DataFrame实现了join()方法，可以按照索引进行数据合并。
 def myJoin():
     df1 = pd.DataFrame({
-        'key': ['A', 'B', 'C','x'],
-        'value1': [1, 2, 3,77]
+        'key': ['A', 'B', 'C'],
+        'value1': [1, 2, 3]
     })
     df2 = pd.DataFrame({
-        'key': ['B', 'C', 'D'],
+        'key': ['B', 'C', 'A'],
         'value2': [4, 5, 6]
     })
     # ValueError: columns overlap but no suffix specified: Index(['key'], dtype='str')
@@ -216,7 +218,7 @@ if __name__ == '__main__':
 
     #merge_Lefton_Righton()
 
-    #merge_LeftIndex_RightIndex()
+    merge_LeftIndex_RightIndex()
     '''
     上面3种设置合并的键与索引
     一句话总结：
@@ -225,7 +227,7 @@ if __name__ == '__main__':
     索引用 left/right_index！
     '''
     print()
-    #myJoin()
+    myJoin()
     '''
     上面 merge VS join
     merge ：按 相同列名 连接+默认 内连接（inner），自动分配后缀
@@ -235,4 +237,4 @@ if __name__ == '__main__':
     connectionByHow()
 
     # 家庭作业，自己看懂
-    #dealDuplicateColumn()
+    dealDuplicateColumn()

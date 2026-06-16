@@ -14,7 +14,7 @@ import matplotlib.pyplot as plt
 # axis=1 → 按列拼接，左右加
 
 # 1 读取员工数据
-df = pd.read_csv("../data/employees.csv")
+df = pd.read_csv("./data/employees.csv")
 #print("员工信息初始数据：\n",df)
 #
 # #使用employees（员工）数据集，其中包含10个字段类型等说明：

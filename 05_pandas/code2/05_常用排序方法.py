@@ -18,7 +18,7 @@ drop_duplicates(subset=[列名1, 列名2])：按列去重
 
 
 #初始化： 读取天气数据
-df = pd.read_csv("../data/weather.csv")
+df = pd.read_csv("./data/weather.csv")
 
 #（1）找到最高温度最大的30天,通过nlargest()找出temp_max最大的30条数据。
 print("通过nlargest()按列找出temp_max最大的30条数据:\n",df.nlargest(30, "temp_max"))
